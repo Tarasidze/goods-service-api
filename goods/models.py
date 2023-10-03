@@ -14,7 +14,7 @@ class Category(models.Model):
 
 class Article(models.Model):
     name = models.CharField(max_length=63, unique=True)
-    photo = models.URLField(max_length=255)
+    photo = models.URLField(max_length=511)
     category = models.ForeignKey(
         to=Category,
         on_delete=models.CASCADE,
