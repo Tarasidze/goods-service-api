@@ -74,8 +74,8 @@ Article(Goods) CRUD API
 - `DELETE /cities/{city_id}`: Delete a specific goods.
 
 Swagger documentation endpoints 
--`api/doc/swagger/`: documentation endpoint
--`api/doc/`: Get GoodsAPI.yaml file
+- `api/doc/swagger/`: documentation endpoint
+- `api/doc/`: Get GoodsAPI.yaml file
 
 ## :sparkles: What Next?
 
