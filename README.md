@@ -7,6 +7,7 @@ This is a Python DRF project that provides handle goods for the backend site.
 - [Installation](#rocket-getting-started)
 - [Design Choices](#wrench-design-choices)
 - [API Endpoints](#computer-api-endpoints)
+- [Next to do](#sparkles-what-next)
 
 ## :rocket: Installation 
 
@@ -71,3 +72,15 @@ Article(Goods) CRUD API
 - `GET /cities/{city_id}`: Get the details of a specific goods.
 - `PUT /cities/{city_id}`: Update the details of a specific goods.
 - `DELETE /cities/{city_id}`: Delete a specific goods.
+
+Swagger documentation endpoints 
+-`api/doc/swagger/`: documentation endpoint
+-`api/doc/`: Get GoodsAPI.yaml file
+
+## :sparkles: What Next?
+
+```angular2html
+- add email notifications (almost done)
+- add a feature to generate PDF
+- add tests
+```
