@@ -1,3 +1,5 @@
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import extend_schema, OpenApiParameter
 from rest_framework import viewsets, mixins
 from rest_framework.permissions import IsAdminUser
 from django.db.models.query import QuerySet
@@ -61,3 +63,30 @@ class ArticleViewSet(viewsets.ModelViewSet):
             return ArticleDetailSerializer
 
         return ArticleSerializer
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                "category",
+                type=OpenApiTypes.INT,
+                description="Filter by category id (ex. ?category=2)",
+            ),
+            OpenApiParameter(
+                "offer_of_the_month",
+                type=OpenApiTypes.INT,
+                description="Filter by offer_of_the_month(boolean) (ex. ?offer_of_the_month=1)",
+            ),
+            OpenApiParameter(
+                "available",
+                type=OpenApiTypes.INT,
+                description="Filter by available(boolean) (ex. ?available=0)",
+            ),
+            OpenApiParameter(
+                "self_delivery",
+                type=OpenApiTypes.INT,
+                description="Filter by self_delivery(boolean) (ex. ?self_delivery=1)",
+            ),
+        ]
+    )
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
